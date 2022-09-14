@@ -4,14 +4,14 @@ from pyspark.sql.types import *
 
 spark = SparkSession.builder.appName("Covid ETL").getOrCreate()
 
-covid_data = spark.read.csv('gs://covid-etl-pipeline/data/*.csv',
+covid_data = spark.read.csv('gs://bucket-name/data/*.csv',
                             sep=';', header='true', inferSchema='true')
 
 
 # #### Processing data ####
 
 
-# Removing hour from "data"(date) column
+# Removing hour from "data" column
 
 covid_data = covid_data.withColumn("data", split(col("data"), " ").getItem(0))
 
@@ -59,7 +59,7 @@ obitos_brasil = brasil_covid\
                    brasil_covid["populacaoTCU2019"]*100000, 1)).alias("Mortalidade"))
 
 
-# #### Uploading views to BigQuery ####
+# #### Uploading views to BigQuery dataset tables ####
 
 
 recuperados_brasil.write \
