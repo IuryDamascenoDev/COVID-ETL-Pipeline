@@ -1,7 +1,7 @@
 # Visualization pipeline for covid-19 data by the end of 2021 in Brazil
 
 ## What this pipeline does  
-Takes data from https://covid.saude.gov.br/ and transforms it to fit the visualizations showed in website.
+Takes covid data available at https://covid.saude.gov.br/ and transforms it to fit the visualizations showed in website.
 
 ## Dataproc cluster creation  
 
