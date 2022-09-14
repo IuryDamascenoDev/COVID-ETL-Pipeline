@@ -13,6 +13,6 @@ bq_bucket_name = "bucket-name"
 if __name__ == '__main__':
     # Creating buckets
     bq_bucket = storage_client.create_bucket(bq_bucket_name,
-                                             location="us-central1")
+                                             location="region-zone")
 
     print("Bucket created")
