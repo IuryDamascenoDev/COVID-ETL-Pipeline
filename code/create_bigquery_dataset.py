@@ -10,7 +10,7 @@ dataset_id = f"{project}.covid_views"
 
 dataset = bigquery.Dataset(dataset_id)
 
-dataset.location = "us-central1"
+dataset.location = "region-zone"
 
 dataset = client.create_dataset(dataset, timeout=30)
 print("Created dataset")
