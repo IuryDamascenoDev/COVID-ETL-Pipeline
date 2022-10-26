@@ -4,7 +4,7 @@ from pyspark.sql.types import *
 
 spark = SparkSession.builder.appName("Covid ETL").getOrCreate()
 
-covid_data = spark.read.csv('gs://bucket-name/data/*.csv',
+covid_data = spark.read.csv('gs://[bucket-name]/data/*.csv',
                             sep=';', header='true', inferSchema='true')
 
 
