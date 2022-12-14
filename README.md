@@ -6,7 +6,7 @@ Takes covid data available at https://covid.saude.gov.br/ and transforms it to f
 ## Dataproc cluster creation  
 ```bash
 gcloud dataproc clusters create [cluster-name] --enable-component-gateway --region [region] --zone [region-zone] --master-machine-type n1-standard-2 --master-boot-disk-size 500 --num-workers 2 --worker-machine-type n1-standard-2 --worker-boot-disk-size 500 --image-version 1.5-ubuntu18 --project [project-name]
-```bash
+```
 ## Cloud Storage bucket creation  
 ```bash
 python3 ./code/create_gcs_bucket.py
